@@ -23,7 +23,7 @@ function authenticationMiddleware(req, res, next) {
 
 //Backend running
 router.get("/", (req, res) => {
-  res.send("Backend running.");
+  res.send("Backend running!");
 });
 
 //Show all inventory
