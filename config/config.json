@@ -1,0 +1,19 @@
+{
+  "development": {
+    "username": "acjpymhkgnvtkd",
+    "password": "1eae16c6bfe542413afcfaf75c03a7d5bb8fb79649e8c637ab52f648d737d834",
+    "database": "d7kqothtsc8th1",
+    "host": "ec2-54-196-89-124.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "port": 5432,
+    "sslmode": "require",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      },
+      "keepAlive": true
+    },
+    "ssl": true
+  }
+}
