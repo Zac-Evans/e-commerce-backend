@@ -17,7 +17,7 @@ if (false) {
     config.development.database,
     config.development.username,
     config.development.password,
-    config
+    config.development
   );
 }
 
