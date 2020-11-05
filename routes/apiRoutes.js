@@ -387,7 +387,7 @@ router.post("/add-to-cart", (req, res) => {
 });
 
 //Delete from cart
-router.post("/delete-from-cart/", (req, res) => {
+router.delete("/delete-from-cart/", (req, res) => {
   console.log(req.body);
   db.cart_items
     .destroy({
