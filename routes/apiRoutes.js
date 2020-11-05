@@ -388,7 +388,8 @@ router.post("/add-to-cart", (req, res) => {
 
 //Delete from cart
 router.delete("/delete-from-cart/", (req, res) => {
-  console.log(req.body);
+  console.log(req.body.shopping_cart_id);
+  console.log(req.body.product_id);
   db.cart_items
     .destroy({
       where: {
