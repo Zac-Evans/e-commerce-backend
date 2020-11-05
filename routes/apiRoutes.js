@@ -387,7 +387,7 @@ router.post("/add-to-cart", (req, res) => {
 });
 
 //Delete from cart
-router.delete("/delete-from-cart/:cart_id/:item_id", (req, res) => {
+router.post("/delete-from-cart/:cart_id/:item_id", (req, res) => {
   db.cart_items
     .destroy({
       where: {
@@ -396,7 +396,7 @@ router.delete("/delete-from-cart/:cart_id/:item_id", (req, res) => {
       },
     })
     .then(() => res.send("Removed item from cart."))
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(req.params));
 });
 
 module.exports = router;
