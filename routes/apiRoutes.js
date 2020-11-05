@@ -238,7 +238,7 @@ router.put("/user/:id", (req, res) => {
       }
     )
     .then((user) => res.json(user))
-    .catch((err) => alert(err));
+    .catch((err) => console.log(err));
 });
 
 //Login to an account
