@@ -386,13 +386,25 @@ router.post("/add-to-cart", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-//Delete from cart
+//Delete item from cart
 router.delete("/delete-from-cart/:cart_id/:item_id", (req, res) => {
   db.cart_items
     .destroy({
       where: {
         shopping_cart_id: req.params.cart_id,
         product_id: req.params.item_id,
+      },
+    })
+    .then(() => res.send("Removed item from cart."))
+    .catch((err) => console.log(req.params));
+});
+
+//Delete whole cart
+router.delete("/delete-whole-cart/:cart_id", (req, res) => {
+  db.cart_items
+    .destroy({
+      where: {
+        shopping_cart_id: req.params.cart_id,
       },
     })
     .then(() => res.send("Removed item from cart."))
