@@ -386,4 +386,17 @@ router.post("/add-to-cart", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+//Delete from cart
+router.post("/delete-from-cart/", (req, res) => {
+  db.cart_items
+    .destroy({
+      where: {
+        shopping_cart_id: req.body.shopping_cart_id,
+        product_id: req.body.product_id,
+      },
+    })
+    .then(() => res.send("Removed item from cart."))
+    .catch((err) => console.log(err));
+});
+
 module.exports = router;
